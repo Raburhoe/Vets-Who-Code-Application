@@ -1,0 +1,144 @@
+.commonP {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.start {
+  font-size:medium;
+  font-weight: bold;
+}
+/*NavBar with sticky header*/
+.nav-link {
+  color: white;
+}
+
+.navBar {
+  padding: 5px;
+  background: #555;
+  color: #f1f1f1;
+  display: flex;
+  z-index: 1000;
+}
+
+.content {
+    padding: 16px;
+  }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+li {
+  float:right;
+  list-style-type: none;
+}
+
+li a {
+  display: block;
+  padding: 8px;
+  background-color: #555;
+}
+
+html, body {margin: 0; padding: 0; height: 100%;
+}
+/*to take up their attention*/
+
+.intro {
+    height: 100vh; 
+    background-color: #9dafb0; 
+    padding: 20px; 
+    text-align: center; 
+} 
+.military-History {
+    Height: 50vh;
+    background-color: #FFFFFF; 
+    padding: 20px; 
+    padding-top: 100px;
+    text-align: center;             
+}
+.PTJourney {
+  height: 100vh; 
+  background-color: #9dafb0; 
+  padding: 20px;
+  padding-top: 100px; 
+  text-align: center;
+  margin-top: 20px; 
+} 
+
+/*Tables/button*/
+table, tr, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+    alignment: center;
+    width: auto;
+    padding: 20px;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+    position: relative;
+    
+}
+/* Counter */
+
+
+.counterContainer {
+  text-align: center;
+  font-size: 50px;
+  background-color: #9dafb0;
+  text-transform: uppercase;
+}
+#countervalue {
+  font-size: 6rem;
+  font-weight: bold;
+}
+/*This is for the Map*/
+#container {
+    position: relative;
+    width: auto;
+    height: 500px;
+    background-color: solid white;
+}
+.dot {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+}
+.tooltip {
+    position: absolute;
+    background-color: white;
+    padding: 5px;
+    border: 1px solid black;
+    width: 200px;
+    display: none;
+    overflow-wrap: break-word;
+    top: -100%;
+}
+.dot:hover + .tooltip {
+    display: block;
+}
+
+.end {
+  position:flex;
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+
+  padding-bottom: 100px;
+
+}
+

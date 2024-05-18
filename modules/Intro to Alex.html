@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Burhoe</title>
+ <head>
+<link rel="stylesheet" href="Style.css">
+</head> 
+<!-- Introduction of self--> 
+<body>
+    <body>
+    <div class="intro" id="intro">  
+        <h1>R Alexander Burhoe, DPT</h1>
+        <h2>My Journey Through Physical Therapy to Programming</h2>
+        <p class="start">My First website</p>
+        <img src="../img/Me.png" height="260px" width="auto" alt="picture of me here"> <br>
+        <!--Add a list of what we will talk about and then link to it later in teh page with href bullet point-->
+    </body>
+    <!--Get their name-->
+    <body>
+        <input type="text" id="textInput" onkeypress="checkKeyPress(event)" placeholder="What's your name?">
+        <p id="displayParagraph" class="hidden" size="30px" ></p>
+
+
+        <!--start Navbar-->
+        <div class="navBar" id="mynavBar">
+            <ul>
+                <li><a href="#PTJourney" class="nav-link">PT Journey</a></li>
+                <li><a href="#military-History" class="nav-link">Military History</a></li>
+                <li><a href="#intro" class="nav-link">Intro</a></li>
+            </ul>
+        </div>
+      </div>  
+        <!--end insert-->
+
+    </div>
+    </body>
+
+
+
+    <!--Military History-->
+
+    <div class="military-History" id="military-History">
+        <h1>Military History</h1>
+
+        <p id="p1">I didn't serve in the military but my wife did. What branch did my wife serve in?</p>
+        <p id="p2">  </p>
+
+        <button type="button" onclick="myFunction(); 
+            document.getElementById('p2').innerHTML = 'Nope' ">Marines</button>
+        <button type="button" onclick="myFunction();
+            document.getElementById('p2').innerHTML = 'Try Again' ">Navy</button>
+        <button type="button" onclick="myFunction();
+            document.getElementById('p2').innerHTML = 'Keep Trying' "> Army</button>
+        <button type="button" onclick="correctfunction();     
+            document.getElementById('p2').innerHTML = 'Correct! My Wife served in the Air Force for 11 years' "  > Air Force</button>
+    </body>
+    </div>
+
+    <!--PT journey-->
+    <div class="PTJourney" id="PTJourney">
+        <h1>My Journey from Physical Therapy to Coding</h1>
+        <p>You're probably wondering how a Doctor of Physical Therapy came to apply for Vets Who Code.</p>
+        <p>Lets find out. Start by scrolling over the map to see different aspects of my PT journey.</p>
+        <!--Map-->
+        <div id="container">
+            <img src="../img/US map.png" alt="Interactive Image" width="auto" height="500">
+            <div class="dot" style="top: 200px; left: 350px;"></div><!--Utah-->
+            <div class="tooltip" style="top: 210px; left: 340px;">I grew up in Utah and got my BS of Exercise Science at Brigham Young University</div>
+            <div class="dot" style="top: 380px; left: 510px;"></div><!--Texas-->
+            <div class="tooltip" style="top: 390px; left: 510px;">I got my Doctorate of Physical Therapy at Angelo State University</div>
+            <div class="dot" style="top: 350px; left: 540px;"></div><!--Dallas Texas-->
+            <div class="tooltip" style="top: 360px; left: 530px;">I did clinicals in Dallas and started Travel Physical Therapy Here</div>
+            <div class="dot" style="top: 320px; left: 780px;"></div><!--Georgia-->
+            <div class="tooltip" style="top: 330px; left: 770px;">I worked in GA with collegiate athletes</div>
+            <div class="dot" style="top: 215px; left: 850px;"></div><!--Virginia-->
+            <div class="tooltip" style="top: 225px; left: 840px;">My last travel contract was an hour out of DC at Purcellville Orthopedic PT</div>
+            <div class="dot" style="top: 430px; left: 830px;"></div><!--Florida-->
+            <div class="tooltip" style="top: 440px; left: 820px;">I got married, started a business and ended my PT career</div>
+        </div>
+    </div>
+        <div class="table">
+        <table>
+            <tr>
+                <th>Things I liked about PT</th>
+                <th>Things I disliked about PT</th>
+            </tr>
+            <tr>
+                <td>Ability to create individualized treatment plans</td>
+                <td>Insurance dictated treatment and incentivized generalized treatment</td>
+            </tr>
+            <tr>
+                <td>Constant learning</td>
+                <td>Most treatments are repetitious</td>
+            </tr>
+            <tr>
+                <td>Got to meet people from diverse backgrounds</td>
+                <td>Limited opportunities for growth unless I started my own company</td>
+            </tr>
+        </table>
+        </div>
+        
+        <p class="commonP" id="commonP">I noticed the lack of growth opportunities and difficulty in providing individualized, high quality care and decided to start my own business: <a href="https://golfandsportspt.com" target="_blank">Golf and Sports Physical Therapy</a> (no I didn't create that website from HTML)</p>
+        <p class="commonP" id="commonP">I realized PT was not for me and that coding would give me better opportunities. Plus I can do cool stuff like this:</p>
+        <body>
+            <!--counter-->
+            <main>
+              <div class="counterContainer" id="counterContainer">
+                <h1>counter</h1>
+                <span id="countervalue">0</span>
+                <div class="none">
+                  <button class="btn decrease">decrease</button>
+                  <button class="btn reset">reset</button>
+                  <button class="btn increase">increase</button>
+                </div>
+              </div>
+            </main>
+            <!--End + LinkedIn-->
+            <div id="end" class="end">
+                <p>Thank you <span id="personName"></span>for coming to my page. Please leave feedback for how I can improve and add me on LinkedIn for further connection.</p>
+                <a href="https://www.linkedin.com/in/alex-burhoe/" target="_blank">
+                    <img src="../img/linkedin.png" alt="LinkedIn Profile png" style=' width:100px; height:auto'>
+                </a>
+            </div>           
+        </body>
+        
+        
+    </div>
+<!--Navbar -->
+    <script>
+      window.onscroll = function() {navbarScroll()};
+  
+      var header = document.getElementById("mynavBar");
+      var sticky = header.offsetTop;
+  
+      function navbarScroll() {
+      if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+      } else {
+          header.classList.remove("sticky");
+      }
+      }
+  </script>
+<!--For name Display-->
+<script>
+  function checkKeyPress(event) {
+      if (event.key === 'Enter') {
+          displayInput();
+      }
+  }
+
+  function displayInput() {
+      var inputText = document.getElementById("textInput").value;
+      var displayPara = document.getElementById("displayParagraph");
+      if (inputText.trim() !== "") {
+          displayPara.innerHTML = "Nice to meet you " + inputText + ". Scroll down and interact to learn more about my past";
+          displayPara.classList.remove("hidden");
+          document.getElementById("textInput").value = ''; // Clear the input box
+          var displayElement = document.getElementById("personName")
+          displayElement.innerHTML = inputText+" "
+      } else {
+          displayPara.classList.add("hidden");
+      }
+  }
+</script>
+
+<!--For Military history-->
+    <script>
+      function myFunction() {
+      document.getElementById("p2").style.fontSize = "15px";
+      document.getElementById("p2").style.color = "Red";        
+      }
+
+      function correctfunction() {
+          document.getElementById("p2").style.fontSize = "25px";
+          document.getElementById("p2").style.color = "Green";
+      }
+      </script>
+
+
+<!-- javascript -->
+<script>// set counter inital value to zero
+  let count = 0;
+  // select value and buttons
+  const value = document.querySelector("#countervalue");
+  const btns = document.querySelectorAll(".btn");
+  
+  btns.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      const styles = e.currentTarget.classList;
+      if (styles.contains("decrease")) {
+        count--;
+      } else if (styles.contains("increase")) {
+        count++;
+      } else {
+        count = 0;
+      }
+  
+      if (count > 0) {
+        value.style.color = "green";
+      }
+      if (count < 0) {
+        value.style.color = "red";
+      }
+      if (count === 0) {
+        value.style.color = "black";
+      }
+      value.textContent = count;
+    });
+  });
+  </script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (a) {
+                a.preventDefault();
+        
+                    const headerOffset = document.querySelector('.navBar').offsetHeight; 
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start', 
+                        inline: 'nearest', 
+                        offset: -headerOffset document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (a) {
+                    a.preventDefault();
+                    
+                                const headerOffset = document.querySelector('.navBar').offsetHeight;
+                                
+                                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'start',
+                                    inline: 'nearest', 
+                                    offset: -headerOffset 
+                                });
+                    });
+            });
+        });
+    });
+});
+    </script>
+</body>
+</html>
